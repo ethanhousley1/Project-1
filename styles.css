@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #FFE2E2;
+    --secondary-color: #FFFDEC;
+    --accent-color-1: #86A788;
+    --accent-color-2: #FFCFCF;
+    /* https://colorhunt.co/palette/86a788fffdecffe2e2ffcfcf */
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    width: 100%;
+    font-size: 1.04rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: auto;
+}
+nav .nav-btn {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+}
+.nav-btn:hover {
+    box-shadow: 0px 4px 6px -1px;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    top: 0;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.container {
+    border-radius: 30px;
+    height: 450px;
+    width: 900px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--accent-color-2)
+}
+
+.container h1 {
+    color: black;
+}
+
+.card-container {
+    /* border: 5px solid blue; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    overflow: auto;
+    gap: 0px;
+    justify-content: space-evenly;
+    height: 80%;
+}
+.card {
+    box-shadow: 2px 1px 10px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 1px;
+    /* border: 5px solid salmon; */
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+
+}
+
+.card:hover {
+    width: 300px;
+    box-shadow: 1px 1px 3px;
+}
+
+
+
+.card img {
+    width: 100%;;
+    object-fit: cover;
+    max-height: 160px;
+}
+
+.card:hover .button {
+    display:block;
+}
+
+.button {
+    display:none;
+    width: 50%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px 2px;
+    background-color: #EBC8CB;
+}
+.button:active {
+    box-shadow: 1px 1px 3px inset;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+nav button:hover {
+    background-color: #EBC8CB90;
+}
+
+/* MAIN BODY (CONTAINS THE PRODUCT) */
+.product-container {
+    width: 100%;
+    height: 800px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.product-desc {
+    display:flex;
+    width: 100%;
+    background-color: var(--accent-color-1);
+}
+.product-desc img {
+    min-width: 200px;
+    width: 30%;
+}
+
+.product-info {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 80%;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+@media (max-width: 1068px) {
+.card {
+        width: 100%;
+    }
+.card:hover {
+        width: inherit;
+    }
+.container {
+    height: auto;
+}
+}
