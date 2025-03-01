@@ -12,24 +12,24 @@
     <script src="https://kit.fontawesome.com/48a2b0e4ef.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="w-full flex flex-col justify-center items-center">
 
-    <header class="w-full position-relative">
+    <header id=top class="w-full position-relative">
         <div class="overflow-hidden rounded-3xl flex w-full h-96 justify-center items-center">
             <h1 id="overlay">Microneedling</h1>
             <img class="w-full h-full object-cover" src="img/EthanAnna-7.jpg" alt="">
         </div>
     </header>
-    <nav class="main-nav">
-        <button class="p-1 bg-white w-1/5 nav-btn">Laborum, placeat.</button>
-        <button class="p-1 bg-white w-1/5 nav-btn">Laborum, placeat.</button>
-        <button class="p-1 bg-white w-1/5 nav-btn">Laborum, placeat.</button>
+    <nav class="main-nav flex justify-center items-center">
+        <button class="p-1 bg-white w-1/5 nav-btn"><i class="fa-solid fa-house"></i> Home</button>
+        <button class="p-1 bg-white w-1/5 nav-btn"><i class="fa-solid fa-camera"></i> Serice Photo Library</button>
+        <button class="p-1 bg-white w-1/5 nav-btn"><i class="fa-solid fa-comment"></i> Social Media and More!</button>
     </nav>
 
-<div class="container">
+<div class="container flex flex-col items-center justify-around">
     <h1>Anna's Skin and Spa</h1>
-    <div class="card-container">
-        <div class="card">
+    <div class="card-container flex flex-wrap justify-evenly w-full">
+        <div class="card flex flex-col flex-wrap items-center">
             <h3>Nails</h3>
             <img src="./img/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg" alt="">
             <p>Nails, nails, and more nails! I will give you long lasting nails at an affordable price.</p>
@@ -55,7 +55,7 @@
     <!-- MAIN BODY -->
 </div>
 <section class="product-container">
-    <h1 class="text-4xl">Learn About our Most Popular Service!</h1>
+    <h1 class="text-4xl"><i class="fa-solid fa-star"></i> Learn About our Most Popular Service! <i class="fa-solid fa-star"></i></h1>
     <div class="product-desc">
         <img class='overflow-hidden rounded-2xl'src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMPdjyvtfIDJYe2SpPWk4Zf4XM1DTCrrV0AQ&s" alt="">
         <div class="product-info">
@@ -85,6 +85,7 @@
     </div>
 </section>
 <article class="service">
+    <!-- this code I learned from the UTD presentation on videos -->
     <video class="rounded-lg h-96" autoplay muted loop>
         <source src="video/5937412-uhd_2160_3840_24fps.mp4" type="video/mp4">
     </video>
@@ -107,6 +108,46 @@
         </div>
     </div>
 </article>
+
+<section id="divider" class="w-full">
+    <div class="divider-container w-full h-48">
+        <img class="object-cover w-full h-full" src="img/wave-haikei (1).svg" alt="" id="svg-background">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="flex flex-wrap flex-col">
+    <h2 class="text-2xl self-center">Reach out to us!</h2>
+    <form class="flex flex-col w-1/4 m-4" action="">
+        <!-- I used chatGPT for the following labels, I just wanted to make sure I was creating the form correctly, and that I was doing datetime correctly -->
+        <label for="name">Name:</label>
+        <input type="text" class="text-black">
+        <label for="email">Email:</label>
+        <input type="email" class="text-black">
+        <label for="datetime">Date and Time</label>
+        <input class="text-black" type="datetime-local" name="datetime" id="datetime">
+        
+
+        <label for="services">Services:</label>
+        <input type="text">
+        <label for="staff">Choose your Esthnetician:</label>
+        <input type="name" name="name" id="staff-name">
+        <button class="rounded-2xl m-4">Submit</button>
+
+    </form>
+
+    <h2>Thank you for visiting my website!</h2>
+    <p>@annaskinandspa</p>
+    <div class="dropdown">
+        <span id="services" class="rounded-2xl p-1">Hover for Services!</span>
+        <span class="dropdown-content">
+            <p>Facial</p>
+            <p>Microneedling</p>
+            <p>Waxing</p>
+        </span>
+    </div>
+    <a class="self-end" href="#top">Back to Top</a>
+</footer>
 
 </body>
 </html>
